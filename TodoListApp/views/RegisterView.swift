@@ -20,6 +20,10 @@ struct RegisterView: View {
 
                 // Login Form
                 Form {
+                    TextField("Full Name", text: $viewModel.name)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
+
                     TextField("Email Address", text: $viewModel.email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .textInputAutocapitalization(.never)
