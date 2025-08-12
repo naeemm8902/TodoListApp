@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		5302CFA72E4B2C9900E19716 /* FirebaseAI in Frameworks */ = {isa = PBXBuildFile; productRef = 5302CFA62E4B2C9900E19716 /* FirebaseAI */; };
+		5302CFA92E4B2C9900E19716 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5302CFA82E4B2C9900E19716 /* FirebaseAnalytics */; };
+		5302CFAB2E4B2C9900E19716 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5302CFAA2E4B2C9900E19716 /* FirebaseAnalyticsCore */; };
+		5302CFAD2E4B2C9900E19716 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = 5302CFAC2E4B2C9900E19716 /* FirebaseAnalyticsIdentitySupport */; };
+		5302CFAF2E4B2C9900E19716 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 5302CFAE2E4B2C9900E19716 /* FirebaseAppCheck */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		5302CF852E4B24F600E19716 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +60,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5302CFAD2E4B2C9900E19716 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
+				5302CFA92E4B2C9900E19716 /* FirebaseAnalytics in Frameworks */,
+				5302CFAB2E4B2C9900E19716 /* FirebaseAnalyticsCore in Frameworks */,
+				5302CFAF2E4B2C9900E19716 /* FirebaseAppCheck in Frameworks */,
+				5302CFA72E4B2C9900E19716 /* FirebaseAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +125,11 @@
 			);
 			name = TodoListApp;
 			packageProductDependencies = (
+				5302CFA62E4B2C9900E19716 /* FirebaseAI */,
+				5302CFA82E4B2C9900E19716 /* FirebaseAnalytics */,
+				5302CFAA2E4B2C9900E19716 /* FirebaseAnalyticsCore */,
+				5302CFAC2E4B2C9900E19716 /* FirebaseAnalyticsIdentitySupport */,
+				5302CFAE2E4B2C9900E19716 /* FirebaseAppCheck */,
 			);
 			productName = TodoListApp;
 			productReference = 5302CF772E4B24EE00E19716 /* TodoListApp.app */;
@@ -195,6 +213,9 @@
 			);
 			mainGroup = 5302CF6E2E4B24ED00E19716;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5302CF782E4B24EE00E19716 /* Products */;
 			projectDirPath = "";
@@ -395,13 +416,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z23WUWXP4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,13 +443,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z23WUWXP4U;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +571,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5302CFA62E4B2C9900E19716 /* FirebaseAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAI;
+		};
+		5302CFA82E4B2C9900E19716 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		5302CFAA2E4B2C9900E19716 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+		5302CFAC2E4B2C9900E19716 /* FirebaseAnalyticsIdentitySupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsIdentitySupport;
+		};
+		5302CFAE2E4B2C9900E19716 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5302CFA32E4B27DC00E19716 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5302CF6F2E4B24ED00E19716 /* Project object */;
 }
