@@ -13,9 +13,20 @@ class LoginViewViewModel: ObservableObject {
             return
         }
         
-        Auth.auth().signIn(withEmail: email, password: password)
-        print("Sucessfull login now redirect him to dashbaord")
-
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] result, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                print("❌ Login error: \(error.localizedDescription)")
+                self.errorMessage = error.localizedDescription
+                return
+            }
+            
+            if let user = result?.user {
+                print("✅ Successfully logged in user: \(user.uid)")
+                // SessionManager will automatically update isAuthenticated
+            }
+        }
     }
     private func validate() -> Bool {
         errorMessage = ""

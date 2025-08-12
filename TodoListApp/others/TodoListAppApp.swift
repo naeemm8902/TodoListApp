@@ -5,6 +5,8 @@ import FirebaseFirestore
 
 @main
 struct TodoListAppApp: App {
+    @StateObject private var sessionManager = SessionManager.shared
+    
     init() {
         print("🔥 Configuring Firebase...")
         FirebaseApp.configure()
@@ -13,7 +15,11 @@ struct TodoListAppApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainView()
+            if sessionManager.isAuthenticated {
+                MainView()
+            } else {
+                LoginView()
+            }
         }
     }
 }

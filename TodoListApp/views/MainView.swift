@@ -6,15 +6,33 @@
 //
 
 import SwiftUI
-//import FirebaseCore
+import FirebaseAuth
 
 struct MainView: View {
-//    init() {
-//        FirebaseApp.configure()
-//    }
+    @StateObject private var viewModel = MainViewViewModel()
+    @StateObject private var sessionManager = SessionManager.shared
+    
     var body: some View {
-          LoginView()
+        TabView {
+            TodoListView()
+                .tabItem {
+                    Label("Todos", systemImage: "checkmark.circle")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
         }
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Sign Out") {
+                    sessionManager.signOut()
+                }
+            }
+        }
+    }
 }
 
 #Preview {
